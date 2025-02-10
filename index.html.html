@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Fun Facts</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+  
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff; 
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fun Fact About AI!</h1>
+    <p id="fact-display"></p>
+    <button id="generate-btn">Generate Fact</button>
+  </div>
+  <script>
+    const facts = [
+      "The first AI computer program was written in 1951 by Christopher Strachey.",
+      "The term 'artificial intelligence' was coined in 1956 by John McCarthy.",
+      "The first self-learning checkers program was written in 1952 by Arthur Samuel, an IBM employee. His program eventually learned to play at a level that could challenge a respectable amateur.",
+      "In 1997, Deep Blue, a chess-playing computer developed by IBM, became the first computer to beat a reigning world chess champion, Garry Kasparov.",
+      "The AI market is expected to reach $190.61 billion by 2025, according to MarketsandMarkets.",
+      "AI is being used in a wide range of industries, including healthcare, finance, transportation, and manufacturing.",
+      "Self-driving cars rely heavily on AI, using technologies like machine learning and computer vision to navigate roads.",
+      "Virtual assistants like Siri and Alexa are powered by AI, using natural language processing to understand and respond to user requests.",
+      "AI is being used to develop personalized medicine, tailoring treatments to individual patients based on their genetic makeup and lifestyle.",
+      "AI is playing an increasingly important role in cybersecurity, helping to detect and prevent threats."
+    ];
+
+    const factDisplay = document.getElementById('fact-display');
+    const generateBtn = document.getElementById('generate-btn');
+  
+    function generateRandomFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factDisplay.textContent = facts[randomIndex];
+    }
+  
+    generateBtn.addEventListener('click', generateRandomFact); 
+  </script>
+</body>
+</html>
